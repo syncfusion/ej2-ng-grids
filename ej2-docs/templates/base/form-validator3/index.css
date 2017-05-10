@@ -1,0 +1,10 @@
+#loader {
+    color: #008cff;
+    height: 40px;
+    width: 30%;
+    position: absolute;
+    font-family:   'Helvetica Neue','calibiri';
+    font-size:16px;
+    top: 45%;
+    left: 45%;
+}

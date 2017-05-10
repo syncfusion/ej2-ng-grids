@@ -1,0 +1,28 @@
+#container {
+    visibility: hidden;
+}
+
+#loader {
+  color: #008cff;
+  height: 40px;
+  width: 30%;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+    .e-cut-icon:before {
+        content: "\e759"
+    }
+    .e-copy-icon:before {
+        content: "\e70a"
+    }
+    .e-paste-icon:before {
+        content: "\e77e"
+    }
+    .e-undo-icon:before {
+        content: "\e791"
+    }
+    .e-redo-icon:before {
+        content: "\e703"
+    }
