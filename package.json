@@ -28,9 +28,5 @@
 		"rollup-plugin-uglify": "^1.0.1",
 		"systemjs": "^0.19.40",
 		"systemjs-plugin-babel": "0.0.17"
-	},
-	"scripts": {
-		"scripts": "ngc -p tsconfig-aot.json && rollup -c rollup.config.js",
-		"bundle": "rollup -c rollup.config.js"
 	}
 }
