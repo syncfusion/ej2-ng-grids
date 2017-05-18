@@ -19,3 +19,19 @@ The most important features available in the Grid components are paging, sorting
 ## Resources
 * [Angular Demo](http://ej2.syncfusion.com/angular/demos/#/grid/default)
 * [Angular Documentation](http://ej2.syncfusion.com/angular/documentation/grid/)
+
+## Installing
+
+To install all dependent packages, use the below command
+
+```
+npm install
+```
+
+## Building
+
+To compile the source files, use the below command
+
+```
+npm run build
+```
