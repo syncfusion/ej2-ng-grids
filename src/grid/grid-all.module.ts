@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColumnDirective, ColumnsDirective } from './columns.directive';
-import { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService } from './grid.component';
+import { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService, DetailRowService } from './grid.component';
 import { GridModule } from './grid.module';
 
 /**
@@ -19,7 +19,8 @@ import { GridModule } from './grid.module';
         SortService,
         GroupService,
         ReorderService,
-        RowDDService
+        RowDDService,
+        DetailRowService
     ]
 })
 export class GridAllModule { }

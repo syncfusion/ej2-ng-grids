@@ -1,6 +1,6 @@
 {
 	"name": "@syncfusion/ej2-ng-grids",
-	"version": "1.0.8",
+	"version": "1.0.0",
 	"description": "Grid Components",
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
@@ -33,7 +33,16 @@
 		"gulp-sass": "^3.1.0",
 		"gulp-typescript": "^3.1.6",
 		"requirejs": "^2.3.3",
-		"typescript": "2.2.2"
+		"typescript": "2.3.4"
+	},
+	"keywords": [
+		"ej2",
+		"syncfusion",
+		"ej2-ng-grids"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/syncfusion/ej2-ng-grids.git"
 	},
 	"scripts": {
 		"build": "gulp build"

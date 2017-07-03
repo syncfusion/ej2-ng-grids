@@ -1,8 +1,9 @@
-import { Directive, ContentChildren } from '@angular/core';
+import { Directive, ViewContainerRef, ContentChildren } from '@angular/core';
 import { ComplexBase, ArrayBase } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'disableHtmlEncode', 'displayAsCheckBox', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'template', 'textAlign', 'type', 'uid', 'valueAccessor', 'visible', 'width'];
+
+let input: string[] = ['allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'disableHtmlEncode', 'displayAsCheckBox', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'isPrimaryKey', 'template', 'textAlign', 'type', 'uid', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -30,24 +31,25 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     * Defines the data type of column.
     * @default null
     */
-    public type: string;
+    public type: any;
     /** 
-    *  If `allowFiltering` set to false, then it disables filtering of a particular column.
+    * If `allowFiltering` set to false, then it disables filtering option and filter bar element of a particular column.By default all columns are filterable.
     * @default true
     */
-    public allowFiltering: boolean;
+    public allowFiltering: any;
     /** 
-    *  If `allowGrouping` set to false, then it disables grouping of a particular column.
+    * If `allowGrouping` set to false, then it disables grouping of a particular column.By default all columns are groupable.
     * @default true
     */
-    public allowGrouping: boolean;
+    public allowGrouping: any;
     /** 
-    * If `allowSorting` set to false, then it disables sorting of a particular column.
+    * If `allowSorting` set to true the user can click the column header and sort the grid by the column field when sorting is enabled.If set to false, then it disables sorting of a particular column.
+By default all columns are sortable.
     * @default true
     */
-    public allowSorting: boolean;
+    public allowSorting: any;
     /** 
-    * It is used to render multiple rows(stacked headers) on the Grid header.
+    * It is used to render multiple header rows(stacked headers) on the Grid header.
     * @default null
     */
     public columns: any;
@@ -60,18 +62,20 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     * If `disableHtmlEncode` set to true, then it encodes the html of header and content cells.
     * @default false
     */
-    public disableHtmlEncode: boolean;
+    public disableHtmlEncode: any;
     /** 
-    * To display column value as check box instead of boolean values.
+    * If `displayAsCheckBox` set as true, then it displays column value as check box instead of boolean values.
     * @default true
     */
-    public displayAsCheckBox: boolean;
+    public displayAsCheckBox: any;
     /** 
     * Defines the field name of column which is mapped with mapping name of DataSource.The bounded columns can be sort, filter and group etc.,
 If the `field` name contains “dot”, then it is considered as complex binding.
+The field name should be a valid JavaScript identifier and
+should contain no spaces, no special characters, and the first character should be a letter.
     * @default undefined
     */
-    public field: string;
+    public field: any;
     /** 
     * The `filterBarTemplate` is used to add a custom control instead of default input control for filter bar.It have create and read functions.
 * create – It is used for creating custom controls.
@@ -95,14 +99,19 @@ and [`date`](http://ej2.syncfusion.com/documentation/base/intl.html#date-formatt
     * Defines the header text of column which is used to display in column header.If `headerText` is not defined, then field name value will be assigned to header text.
     * @default undefined
     */
-    public headerText: string;
+    public headerText: any;
     /** 
-    * Defines the column template as string or element selector which is used to add html element in each cells of the column.
+    * If `isPrimaryKey` set to true, then consider this column as primary key constraint.
+    * @default false
+    */
+    public isPrimaryKey: any;
+    /** 
+    * Defines the column template as string or HTML element ID which is used to add customized element in each cells of the column.
     * @default null
     */
-    public template: string;
+    public template: any;
     /** 
-    * Defines to change alignment of column in both header and content cells.
+    * Define the alignment of column in both header and content cells.
     * @default left
     */
     public textAlign: any;
@@ -110,22 +119,26 @@ and [`date`](http://ej2.syncfusion.com/documentation/base/intl.html#date-formatt
     * Gets the unique identifier value of column. It is used to get column object.
     * @default undefined
     */
-    public uid: string;
+    public uid: any;
     /** 
     * Defines the method which is used to apply custom cell values from external function and display this on each cells of render.
     * @default null
     */
     public valueAccessor: any;
     /** 
-    * If `visible` set to false, then hide the particular column.
+    * If `visible` set to false, then hide the particular column. By default all columns are displayed.
     * @default true
     */
-    public visible: boolean;
+    public visible: any;
     /** 
     * Defines the width of column in pixels or percentage.
     * @default undefined
     */
     public width: any;
+
+    constructor(private viewContainerRef:ViewContainerRef) {
+        super();
+    }
 }
 
 /**
