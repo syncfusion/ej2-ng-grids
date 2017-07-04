@@ -5,7 +5,7 @@ import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow }
 
 import { ColumnsDirective } from './columns.directive';
 
-export const inputs: string[] = ['allowFiltering','allowGrouping','allowPaging','allowReordering','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','dataSource','detailTemplate','enableAltRow','enableHover','enablePersistence','enableRtl','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','sortSettings','width'];
+export const inputs: string[] = ['allowFiltering','allowGrouping','allowKeyboard','allowPaging','allowReordering','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','dataSource','detailTemplate','enableAltRow','enableHover','enablePersistence','enableRtl','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','sortSettings','width'];
 export const outputs: string[] = ['actionBegin','actionComplete','actionFailure','beforePrint','cellDeselected','cellDeselecting','cellSelected','cellSelecting','columnDrag','columnDragStart','columnDrop','created','dataBound','destroyed','detailDataBound','load','printComplete','queryCellInfo','rowDataBound','rowDeselected','rowDeselecting','rowDrag','rowDragStart','rowDrop','rowSelected','rowSelecting','dataSourceChange'];
 export const twoWays: string[] = ['dataSource'];
 
