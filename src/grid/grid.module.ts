@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColumnDirective, ColumnsDirective } from './columns.directive';
-import { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService, DetailRowService } from './grid.component';
+import { AggregateColumnDirective, AggregateColumnsDirective } from './aggregate-columns.directive';
+import { AggregateDirective, AggregatesDirective } from './aggregates.directive';
+import { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService, DetailRowService, AggregateService } from './grid.component';
 
 /**
  * NgModule definition for the Grid component.
@@ -11,12 +13,20 @@ import { GridComponent, FilterService, PageService, SelectionService, SortServic
     declarations: [
         GridComponent,
         ColumnDirective,
-        ColumnsDirective
+        ColumnsDirective,
+        AggregateColumnDirective,
+        AggregateColumnsDirective,
+        AggregateDirective,
+        AggregatesDirective
     ],
     exports: [
         GridComponent,
         ColumnDirective,
-        ColumnsDirective
+        ColumnsDirective,
+        AggregateColumnDirective,
+        AggregateColumnsDirective,
+        AggregateDirective,
+        AggregatesDirective
     ]
 })
 export class GridModule { }

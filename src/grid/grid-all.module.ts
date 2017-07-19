@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ColumnDirective, ColumnsDirective } from './columns.directive';
-import { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService, DetailRowService } from './grid.component';
+import { AggregateColumnDirective, AggregateColumnsDirective } from './aggregate-columns.directive';
+import { AggregateDirective, AggregatesDirective } from './aggregates.directive';
+import { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService, DetailRowService, AggregateService } from './grid.component';
 import { GridModule } from './grid.module';
 
 /**
@@ -20,7 +22,8 @@ import { GridModule } from './grid.module';
         GroupService,
         ReorderService,
         RowDDService,
-        DetailRowService
+        DetailRowService,
+        AggregateService
     ]
 })
 export class GridAllModule { }
