@@ -1,7 +1,7 @@
 import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, ContentChild, Optional } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo } from '@syncfusion/ej2-ng-base';
 import { getValue } from '@syncfusion/ej2-base/util';
-import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Aggregate } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Aggregate, Search } from '@syncfusion/ej2-grids';
 
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
@@ -33,7 +33,7 @@ export class GridComponent extends Grid implements IComponentBase {
     public tags: string[] = ['columns', 'aggregates'];
     public dataSourceChange: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() aggregate: Aggregate) {
+    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() aggregate: Aggregate, @Optional() search: Search) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
@@ -74,4 +74,5 @@ export const ReorderService: ValueProvider = { provide: Reorder, useValue: Reord
 export const RowDDService: ValueProvider = { provide: RowDD, useValue: RowDD};
 export const DetailRowService: ValueProvider = { provide: DetailRow, useValue: DetailRow};
 export const AggregateService: ValueProvider = { provide: Aggregate, useValue: Aggregate};
+export const SearchService: ValueProvider = { provide: Search, useValue: Search};
 

@@ -43,8 +43,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     */
     public allowGrouping: any;
     /** 
-    * If `allowSorting` set to true the user can click the column header and sort the grid by the column field when sorting is enabled.If set to false, then it disables sorting of a particular column.
-By default all columns are sortable.
+    * If `allowSorting` set to false, then it disables sorting option of a particular column.By default all columns are sortable.
     * @default true
     */
     public allowSorting: any;
@@ -71,20 +70,20 @@ By default all columns are sortable.
     /** 
     * Defines the field name of column which is mapped with mapping name of DataSource.The bounded columns can be sort, filter and group etc.,
 If the `field` name contains “dot”, then it is considered as complex binding.
-The field name should be a valid JavaScript identifier and
-should contain no spaces, no special characters, and the first character should be a letter.
+The `field` name must be a valid JavaScript identifier,
+the first character must be an alphabet and should not contain spaces and special characters.
     * @default undefined
     */
     public field: any;
     /** 
-    * The `filterBarTemplate` is used to add a custom control instead of default input control for filter bar.It have create and read functions.
-* create – It is used for creating custom controls.
+    * The `filterBarTemplate` is used to add a custom component instead of default input component for filter bar.It have create and read functions.
+* create – It is used for creating custom components.
 * read – It is used to perform custom filter action.
     * @default null
     */
     public filterBarTemplate: any;
     /** 
-    * The format that is applied to the value before it is displayed and it does not affect the original data source values.Gets the format from the user which can be standard or custom
+    * It is used to change display value with the given format and does not affect the original data.Gets the format from the user which can be standard or custom
 [`number`](http://ej2.syncfusion.com/documentation/base/intl.html#number-formatter-and-parser)
 and [`date`](http://ej2.syncfusion.com/documentation/base/intl.html#date-formatter-and-parser) formats.
     * @default null
