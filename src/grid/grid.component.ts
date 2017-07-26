@@ -1,6 +1,5 @@
 import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, ContentChild, Optional } from '@angular/core';
-import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo } from '@syncfusion/ej2-ng-base';
-import { getValue } from '@syncfusion/ej2-base/util';
+import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
 import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Aggregate, Search } from '@syncfusion/ej2-grids';
 
 import { ColumnsDirective } from './columns.directive';
@@ -45,6 +44,7 @@ export class GridComponent extends Grid implements IComponentBase {
         }
         this.registerEvents(outputs);
         this.addTwoWay.call(this, twoWays);
+        setValue('currentInstance', this, this.viewContainerRef);
     }
 
     public ngOnInit() {

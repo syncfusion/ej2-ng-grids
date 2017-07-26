@@ -1,5 +1,5 @@
 import { Directive, ViewContainerRef, ContentChildren, ContentChild } from '@angular/core';
-import { ComplexBase, ArrayBase } from '@syncfusion/ej2-ng-base';
+import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
@@ -65,6 +65,7 @@ export class AggregateColumnDirective extends ComplexBase<AggregateColumnDirecti
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
+        setValue('currentInstance', this, this.viewContainerRef);
     }
 }
 

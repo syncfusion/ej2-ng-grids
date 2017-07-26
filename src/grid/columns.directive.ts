@@ -1,5 +1,5 @@
 import { Directive, ViewContainerRef, ContentChildren } from '@angular/core';
-import { ComplexBase, ArrayBase } from '@syncfusion/ej2-ng-base';
+import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 
 
 
@@ -137,6 +137,7 @@ and [`date`](http://ej2.syncfusion.com/documentation/base/intl.html#date-formatt
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
+        setValue('currentInstance', this, this.viewContainerRef);
     }
 }
 
