@@ -1,7 +1,7 @@
-import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, ContentChild, Optional } from '@angular/core';
+import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, Optional, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
 import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Aggregate, Search } from '@syncfusion/ej2-grids';
-
+import { Template } from '@syncfusion/ej2-ng-base';
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
 
@@ -31,6 +31,12 @@ export class GridComponent extends Grid implements IComponentBase {
     public childAggregates: any;
     public tags: string[] = ['columns', 'aggregates'];
     public dataSourceChange: any;
+    @ContentChild('rowTemplate')
+    @Template()
+    public rowTemplate: any;
+    @ContentChild('detailTemplate')
+    @Template()
+    public detailTemplate: any;
 
     constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() aggregate: Aggregate, @Optional() search: Search) {
         super();
