@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, Optional, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
-import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Aggregate, Search } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search } from '@syncfusion/ej2-grids';
 import { Template } from '@syncfusion/ej2-ng-base';
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
@@ -38,7 +38,7 @@ export class GridComponent extends Grid implements IComponentBase {
     @Template()
     public detailTemplate: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() aggregate: Aggregate, @Optional() search: Search) {
+    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
@@ -79,6 +79,7 @@ export const GroupService: ValueProvider = { provide: Group, useValue: Group};
 export const ReorderService: ValueProvider = { provide: Reorder, useValue: Reorder};
 export const RowDDService: ValueProvider = { provide: RowDD, useValue: RowDD};
 export const DetailRowService: ValueProvider = { provide: DetailRow, useValue: DetailRow};
+export const ToolbarService: ValueProvider = { provide: Toolbar, useValue: Toolbar};
 export const AggregateService: ValueProvider = { provide: Aggregate, useValue: Aggregate};
 export const SearchService: ValueProvider = { provide: Search, useValue: Search};
 
