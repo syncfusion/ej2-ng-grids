@@ -1,6 +1,6 @@
-import { Directive, ViewContainerRef, ContentChildren } from '@angular/core';
+import { Directive, ViewContainerRef, ContentChildren, ContentChild } from '@angular/core';
 import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
-
+import { Template } from '@syncfusion/ej2-ng-base';
 
 
 let input: string[] = ['allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'disableHtmlEncode', 'displayAsCheckBox', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'isPrimaryKey', 'template', 'textAlign', 'type', 'uid', 'valueAccessor', 'visible', 'width'];
@@ -105,11 +105,6 @@ and [`date`](http://ej2.syncfusion.com/documentation/base/intl.html#date-formatt
     */
     public isPrimaryKey: any;
     /** 
-    * Defines the column template as string or HTML element ID which is used to add customized element in each cells of the column.
-    * @default null
-    */
-    public template: any;
-    /** 
     * Define the alignment of column in both header and content cells.
     * @default left
     */
@@ -134,6 +129,9 @@ and [`date`](http://ej2.syncfusion.com/documentation/base/intl.html#date-formatt
     * @default undefined
     */
     public width: any;
+    @ContentChild('template')
+    @Template()
+    public template: any;
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
