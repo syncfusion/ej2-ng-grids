@@ -35,8 +35,9 @@ export class AggregateDirective extends ComplexBase<AggregateDirective> {
     public childColumns: any;
     public tags: string[] = ['columns'];
     /** 
-    * Configures the aggregate columns.      * @default []
-    */
+     * Configures the aggregate columns.
+     * @default []
+     */
     public columns: any;
 
     constructor(private viewContainerRef:ViewContainerRef) {
