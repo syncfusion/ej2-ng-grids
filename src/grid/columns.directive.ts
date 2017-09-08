@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'isIdentity', 'isPrimaryKey', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -197,6 +197,12 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public headerText: any;
     /** 
+     * column visibility can change based on its [`Media Queries`](http://cssmediaqueries.com/what-are-css-media-queries.html). 
+     * `hideAtMedia` accepts only valid Media Queries.
+     * @default undefined
+     */
+    public hideAtMedia: any;
+    /** 
      * Defines a value that indicates the column has an identity in the database.
      * @default false
      */
@@ -206,6 +212,12 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default false
      */
     public isPrimaryKey: any;
+    /** 
+     * If `showInColumnChooser` set to false, then hide the particular column in column chooser. 
+     * By default all columns are displayed in column Chooser.
+     * @default true
+     */
+    public showInColumnChooser: any;
     /** 
      * Define the alignment of column in both header and content cells.
      * @default left

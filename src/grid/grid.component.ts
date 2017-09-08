@@ -1,12 +1,12 @@
 import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, Optional, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
-import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll, ColumnChooser } from '@syncfusion/ej2-grids';
 import { Template } from '@syncfusion/ej2-ng-base';
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
 
-export const inputs: string[] = ['aggregates','allowFiltering','allowGrouping','allowPaging','allowReordering','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','dataSource','detailTemplate','editSettings','enableAltRow','enableColumnVirtualization','enableHover','enablePersistence','enableRtl','enableVirtualization','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','sortSettings','toolbar','width'];
-export const outputs: string[] = ['actionBegin','actionComplete','actionFailure','batchAdd','batchDelete','beforeBatchAdd','beforeBatchDelete','beforeBatchSave','beforeDataBound','beforePrint','beginEdit','cellDeselected','cellDeselecting','cellEdit','cellSave','cellSelected','cellSelecting','columnDrag','columnDragStart','columnDrop','created','dataBound','destroyed','detailDataBound','load','printComplete','queryCellInfo','rowDataBound','rowDeselected','rowDeselecting','rowDrag','rowDragStart','rowDrop','rowSelected','rowSelecting','toolbarClick','dataSourceChange'];
+export const inputs: string[] = ['aggregates','allowFiltering','allowGrouping','allowPaging','allowReordering','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','dataSource','detailTemplate','editSettings','enableAltRow','enableColumnVirtualization','enableHover','enablePersistence','enableRtl','enableVirtualization','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','showColumnChooser','sortSettings','toolbar','width'];
+export const outputs: string[] = ['actionBegin','actionComplete','actionFailure','batchAdd','batchDelete','beforeBatchAdd','beforeBatchDelete','beforeBatchSave','beforeDataBound','beforeOpenColumnChooser','beforePrint','beginEdit','cellDeselected','cellDeselecting','cellEdit','cellSave','cellSelected','cellSelecting','columnDrag','columnDragStart','columnDrop','created','dataBound','destroyed','detailDataBound','load','printComplete','queryCellInfo','rowDataBound','rowDeselected','rowDeselecting','rowDrag','rowDragStart','rowDrop','rowSelected','rowSelecting','toolbarClick','dataSourceChange'];
 export const twoWays: string[] = ['dataSource'];
 
 /**
@@ -38,7 +38,7 @@ export class GridComponent extends Grid implements IComponentBase {
     @Template()
     public detailTemplate: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll) {
+    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() columnChooser: ColumnChooser) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
@@ -83,4 +83,5 @@ export const ToolbarService: ValueProvider = { provide: Toolbar, useValue: Toolb
 export const AggregateService: ValueProvider = { provide: Aggregate, useValue: Aggregate};
 export const SearchService: ValueProvider = { provide: Search, useValue: Search};
 export const VirtualScrollService: ValueProvider = { provide: VirtualScroll, useValue: VirtualScroll};
+export const ColumnChooserService: ValueProvider = { provide: ColumnChooser, useValue: ColumnChooser};
 
