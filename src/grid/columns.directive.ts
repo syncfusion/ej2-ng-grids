@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'disableHtmlEncode', 'displayAsCheckBox', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'isPrimaryKey', 'template', 'textAlign', 'type', 'uid', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'isIdentity', 'isPrimaryKey', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -32,6 +32,12 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default null
      */
     public type: any;
+    /** 
+     * If `allowEditing` set to false, then it disables editing of a particular column. 
+     * By default all columns are editable.
+     * @default true
+     */
+    public allowEditing: any;
     /** 
      * If `allowFiltering` set to false, then it disables filtering option and filter bar element of a particular column. 
      * By default all columns are filterable.
@@ -80,6 +86,11 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public customAttributes: any;
     /** 
+     * Defines the values which is used to display while adding a new record to the Grid.
+     * @default null
+     */
+    public defaultValue: any;
+    /** 
      * If `disableHtmlEncode` set to true, then it encodes the html of header and content cells.
      * @default false
      */
@@ -89,6 +100,16 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default true
      */
     public displayAsCheckBox: any;
+    /** 
+     * Defines the `IEditCell` object which is used to customize default edit cell and also you can create edit template cell.
+     * @default null
+     */
+    public edit: any;
+    /** 
+     * Defines the `editType` which is used to render the element for editing the grid record.
+     * @default stringedit
+     */
+    public editType: any;
     /** 
      * Defines the field name of column which is mapped with mapping name of DataSource. 
      * The bounded columns can be sort, filter and group etc., 
@@ -176,6 +197,11 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public headerText: any;
     /** 
+     * Defines a value that indicates the column has an identity in the database.
+     * @default false
+     */
+    public isIdentity: any;
+    /** 
      * If `isPrimaryKey` set to true, then consider this column as primary key constraint.
      * @default false
      */
@@ -190,6 +216,11 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default undefined
      */
     public uid: any;
+    /** 
+     * Defines a value to set validation for saving data to the database.
+     * @default null
+     */
+    public validationRules: any;
     /** 
      * Defines the method which is used to apply custom cell values from external function and display this on each cells of render.
      * 
