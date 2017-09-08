@@ -86,7 +86,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public customAttributes: any;
     /** 
-     * Defines the values which is used to display while adding a new record to the Grid.
+     * Defines the default values for component while adding a new record to the Grid.
      * @default null
      */
     public defaultValue: any;
@@ -101,12 +101,12 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public displayAsCheckBox: any;
     /** 
-     * Defines the `IEditCell` object which is used to customize default edit cell and also you can create edit template cell.
+     * Defines the `IEditCell` object to customize default edit cell.
      * @default null
      */
     public edit: any;
     /** 
-     * Defines the `editType` which is used to render the element for editing the grid record.
+     * Defines the type of component for editable.
      * @default stringedit
      */
     public editType: any;
@@ -203,7 +203,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public hideAtMedia: any;
     /** 
-     * Defines a value that indicates the column has an identity in the database.
+     * Defines a value that indicates the column is an identity column in database.
      * @default false
      */
     public isIdentity: any;
@@ -229,7 +229,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public uid: any;
     /** 
-     * Defines a value to set validation for saving data to the database.
+     * Defines rules to validate data before create and update.
      * @default null
      */
     public validationRules: any;
