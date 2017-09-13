@@ -102,7 +102,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     public displayAsCheckBox: any;
     /** 
      * Defines the `IEditCell` object to customize default edit cell.
-     * @default null
+     * @default {}
      */
     public edit: any;
     /** 
