@@ -203,7 +203,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public hideAtMedia: any;
     /** 
-     * Defines a value that indicates the column is an identity column in database.
+     * If `isIdentity` is set to true, then this column is considered as identity column.
      * @default false
      */
     public isIdentity: any;
@@ -213,7 +213,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public isPrimaryKey: any;
     /** 
-     * If `showInColumnChooser` set to false, then hide the particular column in column chooser. 
+     * If `showInColumnChooser` set to false, then hides the particular column in column chooser. 
      * By default all columns are displayed in column Chooser.
      * @default true
      */
