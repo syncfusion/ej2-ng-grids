@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowSorting', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -50,6 +50,11 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default true
      */
     public allowGrouping: any;
+    /** 
+     * If `allowResizing` set to false, then it disables resize option of a particular column.
+     * @default true
+     */
+    public allowResizing: any;
     /** 
      * If `allowSorting` set to false, then it disables sorting option of a particular column. 
      * By default all columns are sortable.
@@ -212,6 +217,16 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default false
      */
     public isPrimaryKey: any;
+    /** 
+     * Defines the maximum width of column in pixels or percentage.
+     * @default undefined
+     */
+    public maxWidth: any;
+    /** 
+     * Defines the minimum width of column in pixels or percentage.
+     * @default undefined
+     */
+    public minWidth: any;
     /** 
      * If `showInColumnChooser` set to false, then hides the particular column in column chooser. 
      * By default all columns are displayed in column Chooser.
