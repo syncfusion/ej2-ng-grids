@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, Optional, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
-import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll, ColumnChooser, Edit } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll, ColumnChooser, Edit, Resize } from '@syncfusion/ej2-grids';
 import { Template } from '@syncfusion/ej2-ng-base';
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
@@ -38,7 +38,7 @@ export class GridComponent extends Grid implements IComponentBase {
     @Template()
     public detailTemplate: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() columnChooser: ColumnChooser, @Optional() edit: Edit) {
+    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() columnChooser: ColumnChooser, @Optional() edit: Edit, @Optional() resize: Resize) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
@@ -85,4 +85,5 @@ export const SearchService: ValueProvider = { provide: Search, useValue: Search}
 export const VirtualScrollService: ValueProvider = { provide: VirtualScroll, useValue: VirtualScroll};
 export const ColumnChooserService: ValueProvider = { provide: ColumnChooser, useValue: ColumnChooser};
 export const EditService: ValueProvider = { provide: Edit, useValue: Edit};
+export const ResizeService: ValueProvider = { provide: Resize, useValue: Resize};
 
