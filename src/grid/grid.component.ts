@@ -5,7 +5,7 @@ import { Template } from '@syncfusion/ej2-ng-base';
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
 
-export const inputs: string[] = ['aggregates','allowFiltering','allowGrouping','allowPaging','allowReordering','allowResizing','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','dataSource','detailTemplate','editSettings','enableAltRow','enableColumnVirtualization','enableHover','enablePersistence','enableRtl','enableVirtualization','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','showColumnChooser','sortSettings','toolbar','width'];
+export const inputs: string[] = ['aggregates','allowFiltering','allowGrouping','allowPaging','allowReordering','allowResizing','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','dataSource','detailTemplate','editSettings','enableAltRow','enableColumnVirtualization','enableHover','enablePersistence','enableRtl','enableVirtualization','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','showColumnChooser','sortSettings','textWrapSettings','toolbar','width'];
 export const outputs: string[] = ['actionBegin','actionComplete','actionFailure','batchAdd','batchDelete','beforeBatchAdd','beforeBatchDelete','beforeBatchSave','beforeDataBound','beforeOpenColumnChooser','beforePrint','beginEdit','cellDeselected','cellDeselecting','cellEdit','cellSave','cellSelected','cellSelecting','columnDrag','columnDragStart','columnDrop','created','dataBound','destroyed','detailDataBound','load','onResize','printComplete','queryCellInfo','resizeStart','resizeStop','rowDataBound','rowDeselected','rowDeselecting','rowDrag','rowDragStart','rowDrop','rowSelected','rowSelecting','toolbarClick','dataSourceChange'];
 export const twoWays: string[] = ['dataSource'];
 
@@ -31,9 +31,63 @@ export class GridComponent extends Grid implements IComponentBase {
     public childAggregates: any;
     public tags: string[] = ['columns', 'aggregates'];
     public dataSourceChange: any;
+    /** 
+     * The Row template which renders customized rows from given template. 
+     * By default, Grid renders a table row for every data source item. 
+     * > * It accepts either [template string](http://ej2.syncfusion.com/documentation/base/template-engine.html) or HTML element ID. 
+     * > * The row template must be a table row.
+     */
     @ContentChild('rowTemplate')
     @Template()
     public rowTemplate: any;
+    /** 
+     * The Detail Template allows user to show or hide additional information about a particular row. 
+     * > * It accepts either [template string](http://ej2.syncfusion.com/documentation/base/template-engine.html) or HTML element ID. 
+     * > * The Detail Template content cannot be wider than the total width of parent Grid, unless the Detail Template is scrollable.
+     * 
+     * ```html
+     *<script id='detailTemplate'>
+     *   <table width="100%" >
+     *       <tbody>
+     *           <tr>
+     *               <td>
+     *                   <span style="font-weight: 500;">First Name: </span> ${FirstName}
+     *               </td>
+     *               <td>
+     *                   <span style="font-weight: 500;">Postal Code: </span> ${PostalCode}
+     *               </td>
+     *           </tr>
+     *           <tr>
+     *               <td>
+     *                   <span style="font-weight: 500;">Last Name: </span> ${LastName}
+     *               </td>
+     *               <td>
+     *                   <span style="font-weight: 500;">City: </span> ${City}
+     *               </td>
+     *           </tr>
+     *       </tbody>
+     *   </table>
+     * </script>
+     *
+     *<div id="Grid"></div>
+     *```
+     *
+     *```typescript
+     *let grid: Grid = new Grid({
+     * dataSource: employeeData,
+     * detailTemplate: '#detailTemplate',
+     * columns: [
+     *  { field: 'FirstName', headerText: 'First Name', width: 110 },
+     *  { field: 'LastName', headerText: 'Last Name', width: 110 },
+     *  { field: 'Title', headerText: 'Title', width: 150 },
+     *  { field: 'Country', headerText: 'Country', width: 110 }
+     * ],
+     * height: 315
+     *});
+     *grid.appendTo('#Grid');
+     *```
+     *     
+     */
     @ContentChild('detailTemplate')
     @Template()
     public detailTemplate: any;

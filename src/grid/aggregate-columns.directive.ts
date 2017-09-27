@@ -78,12 +78,36 @@ export class AggregateColumnDirective extends ComplexBase<AggregateColumnDirecti
      * @default null
      */
     public format: any;
+    /** 
+     * Defines the footer cell template as a string for the aggregate column. 
+     * The `type` name must be used to access aggregate values inside the template. 
+     * 
+     * @default null
+     */
     @ContentChild('footerTemplate')
     @Template()
     public footerTemplate: any;
+    /** 
+     * Defines the group footer cell template as a string for the aggregate column. 
+     * The `type` name must be used to access aggregate values inside the template. 
+     * Additionally, the following fields can be accessed in the template. 
+     * * **field**  - The current grouped field. 
+     * * **key**    - The current grouped value. 
+     * 
+     * @default null
+     */
     @ContentChild('groupFooterTemplate')
     @Template()
     public groupFooterTemplate: any;
+    /** 
+     * Defines the group caption cell template as a string for the aggregate column. 
+     * The `type` name must be used to access aggregate values inside the template. 
+     * Additionally, the following fields can be accessed in the template. 
+     * * **field**  - The current grouped field name. 
+     * * **key**    - The current grouped field value. 
+     * 
+     * @default null
+     */
     @ContentChild('groupCaptionTemplate')
     @Template()
     public groupCaptionTemplate: any;
