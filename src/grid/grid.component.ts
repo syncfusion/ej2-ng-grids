@@ -91,29 +91,9 @@ export class GridComponent extends Grid implements IComponentBase {
     @ContentChild('detailTemplate')
     @Template()
     public detailTemplate: any;
-    /** 
-     * `toolbar` defines toolbar items for grid. It contains built-in and custom toolbar items. 
-     * If a string value is assigned to the `toolbar` option, it will be considered as a template for the whole Grid Toolbar. 
-     * If an Array value is assigned, it will be considered as the list of built-in and custom toolbar items in the Grid's Toolbar. 
-     * <br><br> 
-     * The available built-in toolbar items are 
-     * * add - Add a new record. 
-     * * edit - Edit the selected record. 
-     * * update - Update the edited record. 
-     * * delete - Delete the selected record. 
-     * * cancel - Cancel the edit state. 
-     * * search - Searches records by given key. 
-     * * print - Print the Grid. 
-     * * excelexport - Export the Grid to Excel. 
-     * * pdfexport - Export the Grid to PDF. 
-     * * csvexport - Export the Grid to CSV.<br><br> 
-     * The following code example implements the custom toolbar items. 
-     * 
-     * @default null
-     */
-    @ContentChild('toolbar')
+    @ContentChild('toolbarTemplate')
     @Template()
-    public toolbar: any;
+    public toolbarTemplate: any;
 
     constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() edit: Edit, @Optional() resize: Resize) {
         super();
