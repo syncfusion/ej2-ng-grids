@@ -224,7 +224,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     public maxWidth: any;
     /** 
      * Defines the minimum width of column in pixels or percentage.
-     * @default 50
+     * @default undefined
      */
     public minWidth: any;
     /** 
