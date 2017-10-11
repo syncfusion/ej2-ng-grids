@@ -5,13 +5,6 @@
 	"author": "Syncfusion Inc.",
 	"license": "SEE LICENSE IN license",
 	"dependencies": {
-		"@angular/common": "2.2.1 - 4.10.0",
-		"@angular/compiler": "2.2.1 - 4.10.0",
-		"@angular/core": "2.2.1 - 4.10.0",
-		"@angular/forms": "2.2.1 - 4.10.0",
-		"@angular/http": "2.2.1 - 4.10.0",
-		"@angular/platform-browser": "2.2.1 - 4.10.0",
-		"@angular/platform-browser-dynamic": "2.2.1 - 4.10.0",
 		"@syncfusion/ej2-base": "*",
 		"@syncfusion/ej2-ng-base": "*",
 		"@syncfusion/ej2-grids": "*",
