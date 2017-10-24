@@ -94,6 +94,9 @@ export class GridComponent extends Grid implements IComponentBase {
     @ContentChild('toolbarTemplate')
     @Template()
     public toolbarTemplate: any;
+    @ContentChild('pagerTemplate')
+    @Template()
+    public pagerTemplate: any;
 
     constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() edit: Edit, @Optional() resize: Resize, @Optional() excelExport: ExcelExport, @Optional() pdfExport: PdfExport) {
         super();
