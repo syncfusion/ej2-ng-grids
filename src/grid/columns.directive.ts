@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -61,6 +61,15 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default true
      */
     public allowSorting: any;
+    /** 
+     * Defines the cell content's overflow mode. The available modes are 
+     * * `clip` -  Truncates the cell content when it overflows its area. 
+     * * `ellipsis` -  Displays ellipsis when the cell content overflows its area. 
+     * * `ellipsiswithtooltip` - Displays ellipsis when the cell content overflows its area 
+     * also it will display tooltip while hover on ellipsis applied cell.
+     * @default ellipsis
+     */
+    public clipMode: any;
     /** 
      * It is used to render multiple header rows(stacked headers) on the Grid header.
      * @default null
