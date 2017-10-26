@@ -5,3 +5,7 @@ export {AggregateDirective,AggregatesDirective} from './grid/aggregates.directiv
 export { GridComponent, FilterService, PageService, SelectionService, SortService, GroupService, ReorderService, RowDDService, DetailRowService, ToolbarService, AggregateService, SearchService, VirtualScrollService, EditService, ResizeService, ExcelExportService, PdfExportService} from './grid/grid.component';
 export { GridModule } from './grid/grid.module';
 export { GridAllModule } from './grid/grid-all.module';
+export * from '@syncfusion/ej2-grids';
+export { PagerComponent} from './pager/pager.component';
+export { PagerModule } from './pager/pager.module';
+export { PagerAllModule } from './pager/pager-all.module';
