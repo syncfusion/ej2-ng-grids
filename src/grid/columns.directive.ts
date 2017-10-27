@@ -296,6 +296,9 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     @ContentChild('template')
     @Template()
     public template: any;
+    @ContentChild('headerTemplate')
+    @Template()
+    public headerTemplate: any;
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
