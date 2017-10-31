@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -124,6 +124,12 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default stringedit
      */
     public editType: any;
+    /** 
+     * If `enableGroupByFormat` set to true, then it groups the particular column by formatted values. 
+     * By default no columns are group by format.
+     * @default true
+     */
+    public enableGroupByFormat: any;
     /** 
      * Defines the field name of column which is mapped with mapping name of DataSource. 
      * The bounded columns can be sort, filter and group etc., 
