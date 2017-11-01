@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filterBarTemplate', 'format', 'formatter', 'headerText', 'hideAtMedia', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showInColumnChooser', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -75,6 +75,37 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default null
      */
     public columns: any;
+    /** 
+     * `commands` provides an option to display command buttons in every cell. 
+     * The available built-in command buttons are 
+     * * edit - Edit the record. 
+     * * delete - Delete the record. 
+     * * save - Save the record. 
+     * * cancel - Cancel the edit state.
+     * 
+     * The following code example implements the custom command column.
+     *```html
+     *<style type="text/css" class="cssStyles">
+     *.details-icon:before
+     *{
+     *   content:"\e74d";
+     *}
+     *</style>
+     *<div id="Grid"></div>
+     *```
+     *```typescript
+     *var gridObj = new Grid({
+     *datasource: window.gridData,
+     *columns : [
+     * { field: 'CustomerID', headerText: 'Customer ID' },
+     * { field: 'CustomerName', headerText: 'Customer Name' },
+     * {commands: [{buttonOption:{content: 'Details', click: onClick, cssClass: details-icon}}], headerText: 'Customer Details'}
+     *]
+     *gridObj.appendTo("#Grid");
+     *```     
+     * @default null
+     */
+    public commands: any;
     /** 
      * User can customize css styles and attributes of the content cells of a particular column.
      * 
@@ -305,6 +336,9 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     @ContentChild('headerTemplate')
     @Template()
     public headerTemplate: any;
+    @ContentChild('commandsTemplate')
+    @Template()
+    public commandsTemplate: any;
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
