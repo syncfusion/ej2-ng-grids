@@ -171,7 +171,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      */
     public field: any;
     /** 
-     *  it is used to render your customize filter menu instead of default. 
+     *  Defines the filter options to customize filtering for the particular column. 
      *  @default null
      */
     public filter: any;
@@ -344,6 +344,9 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     @ContentChild('commandsTemplate')
     @Template()
     public commandsTemplate: any;
+    @ContentChild('itemTemplate')
+    @Template()
+    public itemTemplate: any;
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
