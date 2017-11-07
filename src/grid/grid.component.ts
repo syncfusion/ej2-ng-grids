@@ -1,12 +1,12 @@
 import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, Optional, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
-import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll, Edit, Resize, ExcelExport, PdfExport, CommandColumn, ContextMenu } from '@syncfusion/ej2-grids';
+import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll, Edit, Resize, ExcelExport, PdfExport, CommandColumn, ContextMenu, ColumnMenu } from '@syncfusion/ej2-grids';
 import { Template } from '@syncfusion/ej2-ng-base';
 import { ColumnsDirective } from './columns.directive';
 import { AggregatesDirective } from './aggregates.directive';
 
-export const inputs: string[] = ['aggregates','allowExcelExport','allowFiltering','allowGrouping','allowMultiSorting','allowPaging','allowPdfExport','allowReordering','allowResizing','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columns','contextMenuItems','dataSource','detailTemplate','editSettings','enableAltRow','enableColumnVirtualization','enableHover','enablePersistence','enableRtl','enableVirtualization','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowHeight','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','showColumnChooser','sortSettings','textWrapSettings','toolbar','width'];
-export const outputs: string[] = ['actionBegin','actionComplete','actionFailure','batchAdd','batchDelete','beforeBatchAdd','beforeBatchDelete','beforeBatchSave','beforeCopy','beforeDataBound','beforeOpenColumnChooser','beforePrint','beginEdit','cellDeselected','cellDeselecting','cellEdit','cellSave','cellSelected','cellSelecting','checkBoxChange','columnDrag','columnDragStart','columnDrop','contextMenuClick','contextMenuOpen','created','dataBound','destroyed','detailDataBound','excelQueryCellInfo','load','onResize','pdfQueryCellInfo','printComplete','queryCellInfo','resizeStart','resizeStop','rowDataBound','rowDeselected','rowDeselecting','rowDrag','rowDragStart','rowDrop','rowSelected','rowSelecting','toolbarClick','dataSourceChange'];
+export const inputs: string[] = ['aggregates','allowExcelExport','allowFiltering','allowGrouping','allowMultiSorting','allowPaging','allowPdfExport','allowReordering','allowResizing','allowRowDragAndDrop','allowSelection','allowSorting','allowTextWrap','childGrid','columnMenuItems','columns','contextMenuItems','dataSource','detailTemplate','editSettings','enableAltRow','enableColumnVirtualization','enableHover','enablePersistence','enableRtl','enableVirtualization','filterSettings','gridLines','groupSettings','height','locale','pageSettings','printMode','query','queryString','rowDropSettings','rowHeight','rowTemplate','searchSettings','selectedRowIndex','selectionSettings','showColumnChooser','showColumnMenu','sortSettings','textWrapSettings','toolbar','width'];
+export const outputs: string[] = ['actionBegin','actionComplete','actionFailure','batchAdd','batchDelete','beforeBatchAdd','beforeBatchDelete','beforeBatchSave','beforeCopy','beforeDataBound','beforeOpenColumnChooser','beforePrint','beginEdit','cellDeselected','cellDeselecting','cellEdit','cellSave','cellSelected','cellSelecting','checkBoxChange','columnDrag','columnDragStart','columnDrop','columnMenuClick','columnMenuOpen','contextMenuClick','contextMenuOpen','created','dataBound','destroyed','detailDataBound','excelQueryCellInfo','load','onResize','pdfQueryCellInfo','printComplete','queryCellInfo','resizeStart','resizeStop','rowDataBound','rowDeselected','rowDeselecting','rowDrag','rowDragStart','rowDrop','rowSelected','rowSelecting','toolbarClick','dataSourceChange'];
 export const twoWays: string[] = ['dataSource'];
 
 /**
@@ -98,7 +98,7 @@ export class GridComponent extends Grid implements IComponentBase {
     @Template()
     public pagerTemplate: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() edit: Edit, @Optional() resize: Resize, @Optional() excelExport: ExcelExport, @Optional() pdfExport: PdfExport, @Optional() commandColumn: CommandColumn, @Optional() contextMenu: ContextMenu) {
+    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() edit: Edit, @Optional() resize: Resize, @Optional() excelExport: ExcelExport, @Optional() pdfExport: PdfExport, @Optional() commandColumn: CommandColumn, @Optional() contextMenu: ContextMenu, @Optional() columnMenu: ColumnMenu) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
@@ -149,4 +149,5 @@ export const ExcelExportService: ValueProvider = { provide: ExcelExport, useValu
 export const PdfExportService: ValueProvider = { provide: PdfExport, useValue: PdfExport};
 export const CommandColumnService: ValueProvider = { provide: CommandColumn, useValue: CommandColumn};
 export const ContextMenuService: ValueProvider = { provide: ContextMenu, useValue: ContextMenu};
+export const ColumnMenuService: ValueProvider = { provide: ColumnMenu, useValue: ColumnMenu};
 
