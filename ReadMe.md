@@ -21,6 +21,10 @@ Also, it comes with full documentation and support which is available for commer
 * [Angular Demo](http://ej2.syncfusion.com/angular/demos/#/grid/default)
 * [Angular Documentation](http://ej2.syncfusion.com/angular/documentation/grid/)
 
+## Changelog
+
+Check the changelog [here](https://github.com/syncfusion/ej2-ng-grids/blob/master/CHANGELOG.md)
+
 ## Installing
 
 To install all dependent packages, use the below command

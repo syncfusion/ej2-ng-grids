@@ -2,6 +2,76 @@
 
 ## [Unreleased]
 
+## 15.4.22-preview (2017-12-14)
+
+### Grid
+
+#### New Features
+
+- `recordDoubleClick` event added.
+
+#### Bug Fixes
+
+- Script error when pdf exporting with null values.
+
+#### Breaking Changes
+
+- Now `ColumnChooser` module must be injected to use column chooser feature.
+
+#### Bug Fixes
+
+- Grid height 100% is not working fixed.
+
+## 15.4.21-preview (2017-12-08)
+
+### Grid
+
+#### Bug Fixes
+
+- Script error when exporting with Custom aggregate fixed.
+- State persistence in angular is not working fixed.
+- Exporting with stacked header is not working fixed.
+- Alignment issue with checkbox column fixed.
+- Cancelling edit with edit Template fixed.
+- Stacked header alignment issue fixed.
+- Disabling Edit confirm dialog is not working issue fixed.
+- Script error throws when save the record after edit in IE11 fixed.
+- Editing not working after batch save in action begin event fixed.
+- Deleting unsaved record throws Script error fixed.
+
+## 15.4.20-preview (2017-12-01)
+
+### Grid
+
+#### Bug Fixes
+
+- Column format is not applied when type is specified fixed
+- Value search in checkbox filter is not worked for complex binding fixed
+- Editing is not worked with stacked header fixed
+- Numeric Edit column didn't get modified value when Enter key press fixed
+- Null shows as date value in date type column fixed
+- Edit Confirm Dialog is not working properly in batch edit mode fixed
+
+## 15.4.19-preview (2017-11-23)
+
+### Grid
+
+#### Bug Fixes
+
+- Script error resolved when exporting Grid data.
+- Provided filter `menu` support for `template` columns.
+- Localization is not found for `numeric` and `date` filter menu issue fixed.
+
+## 15.4.18-preview (2017-11-16)
+
+### Grid
+
+#### Bug Fixes
+
+- `enum` support for toolbar items provided.
+- Edit state not changed when changing `dataSource` issue fixed.
+- Duplicate service injection in React fixed.
+
 ## 15.4.17-preview (2017-11-13)
 
 ### Grid

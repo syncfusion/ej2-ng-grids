@@ -6,7 +6,6 @@
     "removeComments": true,
     "noLib": false,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "sourceMap": true,
     "pretty": true,
     "allowUnreachableCode": false,
@@ -18,11 +17,16 @@
     "allowJs": false,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "lib": ["es2015","dom"]
+    "suppressImplicitAnyIndexErrors": true,
+    "types": ["jasmine","jasmine-ajax","requirejs","chai","es6-promise"],
+    "lib": ["es2015.collection","es2015.core","es5", "dom"]
   },
   "exclude": [
     "node_modules",
-    "@typings"   
+    "dist",
+    "public",
+    "coverage",
+    "test-report"        
   ],
   "compileOnSave": false
 }
