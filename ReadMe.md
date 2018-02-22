@@ -1,7 +1,7 @@
 # Grid Overview
 
 The Grid control is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated.
-It will pull data from a data source, such as array of JSON objects, `OData web services`, or [`DataManager`](http://ej2.syncfusion.com/documentation/data/api-dataManager.html) binding data fields to columns.
+It will pull data from a data source, such as array of JSON objects, `OData web services`, or [`DataManager`](http://ej2.syncfusion.com/angular/documentation/data/api-dataManager.html) binding data fields to columns.
 Also displaying a column header to identify the field with support for grouped records.
 
 The most important features available in the Grid components are paging, sorting, filtering, searching and grouping.
@@ -40,3 +40,6 @@ To compile the source files, use the below command
 ```
 npm run build
 ```
+## Changelog
+
+Check the changelog [here](https://github.com/syncfusion/ej2-ng-grids/blob/master/CHANGELOG.md)
