@@ -1,10 +1,15 @@
-import { ViewContainerRef } from '@angular/core';
-import { ComplexBase, ArrayBase } from '@syncfusion/ej2-ng-base';
+import { Directive, ViewContainerRef, ContentChildren, ContentChild } from '@angular/core';
+import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
+import { Template } from '@syncfusion/ej2-ng-base';
+
+
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+
 /**
- * `e-column` directive represent a column of the Angular Grid.
- * It must be contained in a Grid component(`ejs-grid`).
+ * `e-column` directive represent a column of the Angular Grid. 
+ * It must be contained in a Grid component(`ejs-grid`). 
  * ```html
- * <ejs-grid [dataSource]='data' allowPaging='true' allowSorting='true'>
+ * <ejs-grid [dataSource]='data' allowPaging='true' allowSorting='true'> 
  *   <e-columns>
  *    <e-column field='ID' width='100'></e-column>
  *    <e-column field='name' headerText='Name' width='100'></e-column>
@@ -12,64 +17,72 @@ import { ComplexBase, ArrayBase } from '@syncfusion/ej2-ng-base';
  * </ejs-grid>
  * ```
  */
-export declare class ColumnDirective extends ComplexBase<ColumnDirective> {
-    private viewContainerRef;
-    /**
+@Directive({
+    selector: 'e-columns>e-column',
+    inputs: input,
+    queries: {
+
+    }
+})
+export class ColumnDirective extends ComplexBase<ColumnDirective> {
+
+
+    /** 
      * Defines the data type of the column.
      * @default null
      */
-    type: any;
-    /**
-     * If `allowEditing` set to false, then it disables editing of a particular column.
+    public type: any;
+    /** 
+     * If `allowEditing` set to false, then it disables editing of a particular column. 
      * By default all columns are editable.
      * @default true
      */
-    allowEditing: any;
-    /**
-     * If `allowFiltering` set to false, then it disables filtering option and filter bar element of a particular column.
+    public allowEditing: any;
+    /** 
+     * If `allowFiltering` set to false, then it disables filtering option and filter bar element of a particular column. 
      * By default all columns are filterable.
      * @default true
      */
-    allowFiltering: any;
-    /**
-     * If `allowGrouping` set to false, then it disables grouping of a particular column.
+    public allowFiltering: any;
+    /** 
+     * If `allowGrouping` set to false, then it disables grouping of a particular column. 
      * By default all columns are groupable.
      * @default true
      */
-    allowGrouping: any;
-    /**
+    public allowGrouping: any;
+    /** 
      * If `allowResizing` set to false, it disables resize option of a particular column.
      * @default true
      */
-    allowResizing: any;
-    /**
-     * If `allowSorting` set to false, then it disables sorting option of a particular column.
+    public allowResizing: any;
+    /** 
+     * If `allowSorting` set to false, then it disables sorting option of a particular column. 
      * By default all columns are sortable.
      * @default true
      */
-    allowSorting: any;
-    /**
-     * Defines the cell content's overflow mode. The available modes are
-     * * `Clip` -  Truncates the cell content when it overflows its area.
-     * * `Ellipsis` -  Displays ellipsis when the cell content overflows its area.
-     * * `EllipsisWithTooltip` - Displays ellipsis when the cell content overflows its area
+    public allowSorting: any;
+    /** 
+     * Defines the cell content's overflow mode. The available modes are 
+     * * `Clip` -  Truncates the cell content when it overflows its area. 
+     * * `Ellipsis` -  Displays ellipsis when the cell content overflows its area. 
+     * * `EllipsisWithTooltip` - Displays ellipsis when the cell content overflows its area 
      * also it will display tooltip while hover on ellipsis applied cell.
      * @default Ellipsis
      */
-    clipMode: any;
-    /**
+    public clipMode: any;
+    /** 
      * Used to render multiple header rows(stacked headers) on the Grid header.
      * @default null
      */
-    columns: any;
-    /**
-     * `commands` provides an option to display command buttons in every cell.
-     * The available built-in command buttons are
-     * * Edit - Edit the record.
-     * * Delete - Delete the record.
-     * * Save - Save the record.
+    public columns: any;
+    /** 
+     * `commands` provides an option to display command buttons in every cell. 
+     * The available built-in command buttons are 
+     * * Edit - Edit the record. 
+     * * Delete - Delete the record. 
+     * * Save - Save the record. 
      * * Cancel - Cancel the edit state.
-     *
+     * 
      * The following code example implements the custom command column.
      *```html
      *<style type="text/css" class="cssStyles">
@@ -89,13 +102,13 @@ export declare class ColumnDirective extends ComplexBase<ColumnDirective> {
      * {commands: [{buttonOption:{content: 'Details', click: onClick, cssClass: details-icon}}], headerText: 'Customer Details'}
      *]
      *gridObj.appendTo("#Grid");
-     *```
+     *```     
      * @default null
      */
-    commands: any;
-    /**
+    public commands: any;
+    /** 
      * The CSS styles and attributes of the content cells of a particular column can be customized.
-     *
+     * 
      * ```html
      *<div id="Grid"></div>
      *```
@@ -113,66 +126,66 @@ export declare class ColumnDirective extends ComplexBase<ColumnDirective> {
      *});
      *gridObj.appendTo('#Grid');
      *```
-     *
+     *     
      * @default null
      */
-    customAttributes: any;
-    /**
+    public customAttributes: any;
+    /** 
      * Defines the column data source  which will act as foreign data source.
      * @default null
      */
-    dataSource: any;
-    /**
+    public dataSource: any;
+    /** 
      * Defines default values for the component when adding a new record to the Grid.
      * @default null
      */
-    defaultValue: any;
-    /**
+    public defaultValue: any;
+    /** 
      * If `disableHtmlEncode` is set to true, it encodes the HTML of the header and content cells.
      * @default false
      */
-    disableHtmlEncode: any;
-    /**
+    public disableHtmlEncode: any;
+    /** 
      * If `displayAsCheckBox` is set to true, it displays the column value as a check box instead of Boolean value.
      * @default false
      */
-    displayAsCheckBox: any;
-    /**
+    public displayAsCheckBox: any;
+    /** 
      * Defines the `IEditCell` object to customize default edit cell.
      * @default {}
      */
-    edit: any;
-    /**
+    public edit: any;
+    /** 
      * Defines the type of component for editing.
      * @default stringedit
      */
-    editType: any;
-    /**
-     * If `enableGroupByFormat` set to true, then it groups the particular column by formatted values.
+    public editType: any;
+    /** 
+     * If `enableGroupByFormat` set to true, then it groups the particular column by formatted values. 
      * By default no columns are group by format.
      * @default true
      */
-    enableGroupByFormat: any;
-    /**
-     * Defines the field name of column which is mapped with mapping name of DataSource.
-     * The bounded columns can be sort, filter and group etc.,
-     * If the `field` name contains “dot”, then it is considered as complex binding.
-     * The `field` name must be a valid JavaScript identifier,
+    public enableGroupByFormat: any;
+    /** 
+     * Defines the field name of column which is mapped with mapping name of DataSource. 
+     * The bounded columns can be sort, filter and group etc., 
+     * If the `field` name contains “dot”, then it is considered as complex binding. 
+     * The `field` name must be a valid JavaScript identifier, 
      * the first character must be an alphabet and should not contain spaces and special characters.
      * @default undefined
      */
-    field: any;
-    /**
-     *  Defines the filter options to customize filtering for the particular column.
+    public field: any;
+    /** 
+     *  Defines the filter options to customize filtering for the particular column. 
      *  @default null
      */
-    filter: any;
-    /**
-     * The `filterBarTemplate` is used to add a custom component instead of default input component for filter bar.
-     * It have create and read functions.
-     * * create: It is used for creating custom components.
+    public filter: any;
+    /** 
+     * The `filterBarTemplate` is used to add a custom component instead of default input component for filter bar. 
+     * It have create and read functions. 
+     * * create: It is used for creating custom components. 
      * * read: It is used to perform custom filter action.
-     *
+     * 
      * ```html
      *<div id="Grid"></div>
      *```
@@ -201,33 +214,33 @@ export declare class ColumnDirective extends ComplexBase<ColumnDirective> {
      *});
      *gridObj.appendTo('#Grid');
      *```
-     *
+     *     
      * @default null
      */
-    filterBarTemplate: any;
-    /**
-     * Defines the mapping column name of the foreign data source.
+    public filterBarTemplate: any;
+    /** 
+     * Defines the mapping column name of the foreign data source. 
      * If it is not defined then the `columns.field` will be considered as mapping column name
      * @default null
      */
-    foreignKeyField: any;
-    /**
+    public foreignKeyField: any;
+    /** 
      * Defines the display column name from the foreign data source which will be obtained from comparing local and foreign data
      * @default null
      */
-    foreignKeyValue: any;
-    /**
-     * It is used to change display value with the given format and does not affect the original data.
-     * Gets the format from the user which can be standard or custom
-     * [`number`](../base/intl.html#number-formatter-and-parser)
+    public foreignKeyValue: any;
+    /** 
+     * It is used to change display value with the given format and does not affect the original data. 
+     * Gets the format from the user which can be standard or custom 
+     * [`number`](../base/intl.html#number-formatter-and-parser) 
      * and [`date`](../base/intl.html#date-formatter-and-parser) formats.
      * @default null
      */
-    format: any;
-    /**
-     * Defines the method which is used to achieve custom formatting from an external function.
+    public format: any;
+    /** 
+     * Defines the method which is used to achieve custom formatting from an external function. 
      * This function triggers before rendering of each cell.
-     *
+     * 
      * ```html
      *<div id="Grid"></div>
      *```
@@ -245,81 +258,81 @@ export declare class ColumnDirective extends ComplexBase<ColumnDirective> {
      *});
      *gridObj.appendTo('#Grid');
      *```
-     *
+     *     
      * @default null
      */
-    formatter: any;
-    /**
-     * Defines the header text of column which is used to display in column header.
+    public formatter: any;
+    /** 
+     * Defines the header text of column which is used to display in column header. 
      * If `headerText` is not defined, then field name value will be assigned to header text.
      * @default undefined
      */
-    headerText: any;
-    /**
-     * column visibility can change based on its [`Media Queries`](http://cssmediaqueries.com/what-are-css-media-queries.html).
+    public headerText: any;
+    /** 
+     * column visibility can change based on its [`Media Queries`](http://cssmediaqueries.com/what-are-css-media-queries.html). 
      * `hideAtMedia` accepts only valid Media Queries.
      * @default undefined
      */
-    hideAtMedia: any;
-    /**
+    public hideAtMedia: any;
+    /** 
      * You can use this property to freeze selected columns in grid.
      * @default false
      */
-    isFrozen: any;
-    /**
+    public isFrozen: any;
+    /** 
      * If `isIdentity` is set to true, then this column is considered as identity column.
      * @default false
      */
-    isIdentity: any;
-    /**
+    public isIdentity: any;
+    /** 
      * If `isPrimaryKey` is set to true, considers this column as the primary key constraint.
      * @default false
      */
-    isPrimaryKey: any;
-    /**
+    public isPrimaryKey: any;
+    /** 
      * Defines the maximum width of the column in pixel or percentage, which will restrict resizing beyond this pixel or percentage.
      * @default undefined
      */
-    maxWidth: any;
-    /**
+    public maxWidth: any;
+    /** 
      * Defines the minimum width of the column in pixels or percentage.
      * @default undefined
      */
-    minWidth: any;
-    /**
-     * If `showColumnMenu` set to false, then it disable the column menu of a particular column.
+    public minWidth: any;
+    /** 
+     * If `showColumnMenu` set to false, then it disable the column menu of a particular column. 
      * By default column menu will show for all columns
      * @default true
      */
-    showColumnMenu: any;
-    /**
-     * If `showInColumnChooser` set to false, then hides the particular column in column chooser.
+    public showColumnMenu: any;
+    /** 
+     * If `showInColumnChooser` set to false, then hides the particular column in column chooser. 
      * By default all columns are displayed in column Chooser.
      * @default true
      */
-    showInColumnChooser: any;
-    /**
+    public showInColumnChooser: any;
+    /** 
      * It defines the custom sort comparer function.
      */
-    sortComparer: any;
-    /**
+    public sortComparer: any;
+    /** 
      * Defines the alignment of the column in both header and content cells.
      * @default Left
      */
-    textAlign: any;
-    /**
+    public textAlign: any;
+    /** 
      * Gets the unique identifier value of the column. It is used to get the object.
      * @default undefined
      */
-    uid: any;
-    /**
+    public uid: any;
+    /** 
      * Defines rules to validate data before creating and updating.
      * @default null
      */
-    validationRules: any;
-    /**
+    public validationRules: any;
+    /** 
      * Defines the method used to apply custom cell values from external function and display this on each cell rendered.
-     *
+     * 
      * ```html
      *<div id="Grid"></div>
      *```
@@ -335,39 +348,60 @@ export declare class ColumnDirective extends ComplexBase<ColumnDirective> {
      *    }]
      *});
      *```
-     *
+     *     
      * @default null
      */
-    valueAccessor: any;
-    /**
+    public valueAccessor: any;
+    /** 
      * If `visible` is set to false, hides the particular column. By default, all columns are displayed.
      * @default true
      */
-    visible: any;
-    /**
+    public visible: any;
+    /** 
      * Defines the width of the column in pixels or percentage.
      * @default undefined
      */
-    width: any;
-    /**
-     * Defines the column template that renders customized element in each cell of the column.
+    public width: any;
+    /** 
+     * Defines the column template that renders customized element in each cell of the column. 
      * It accepts either [template string](../base/template-engine.html) or HTML element ID.
      * @default null
      */
-    template: any;
-    /**
+    @ContentChild('template')
+    @Template()
+    public template: any;
+    /** 
      * Defines the column template as string or HTML element ID which is used to add customized element in the column header.
      * @default null
      */
-    headerTemplate: any;
-    commandsTemplate: any;
-    itemTemplate: any;
-    constructor(viewContainerRef: ViewContainerRef);
+    @ContentChild('headerTemplate')
+    @Template()
+    public headerTemplate: any;
+    @ContentChild('commandsTemplate')
+    @Template()
+    public commandsTemplate: any;
+    @ContentChild('itemTemplate')
+    @Template()
+    public itemTemplate: any;
+
+    constructor(private viewContainerRef:ViewContainerRef) {
+        super();
+        setValue('currentInstance', this, this.viewContainerRef);
+    }
 }
+
 /**
  * Column Array Directive
  * @private
  */
-export declare class ColumnsDirective extends ArrayBase<ColumnsDirective> {
-    constructor();
+@Directive({
+    selector: 'ejs-grid>e-columns',
+    queries: {
+        children: new ContentChildren(ColumnDirective)
+    },
+})
+export class ColumnsDirective extends ArrayBase<ColumnsDirective> {
+    constructor() {
+        super('columns');
+    }
 }

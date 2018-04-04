@@ -18,12 +18,8 @@ Also, it comes with full documentation and support which is available for commer
 * **Localization** - Provides inherent support to localize the UI.
 
 ## Resources
-* [Angular Demo](http://ej2.syncfusion.com/angular/demos/#/grid/default)
+* [Angular Demo](http://ej2.syncfusion.com/angular/demos/#/material/grid/default)
 * [Angular Documentation](http://ej2.syncfusion.com/angular/documentation/grid/)
-
-## Changelog
-
-Check the changelog [here](https://github.com/syncfusion/ej2-ng-grids/blob/master/CHANGELOG.md)
 
 ## Installing
 
@@ -40,6 +36,3 @@ To compile the source files, use the below command
 ```
 npm run build
 ```
-## Changelog
-
-Check the changelog [here](https://github.com/syncfusion/ej2-ng-grids/blob/master/CHANGELOG.md)
