@@ -24,7 +24,7 @@ let input: string[] = ['columnName', 'customAggregate', 'field', 'footerTemplate
  * ```
  */
 @Directive({
-    selector: 'e-aggregate>e-columns>e-column',
+    selector: 'ejs-grid>e-aggregates>e-aggregate>e-columns>e-column',
     inputs: input,
     queries: {
 
@@ -124,7 +124,7 @@ export class AggregateColumnDirective extends ComplexBase<AggregateColumnDirecti
  * @private
  */
 @Directive({
-    selector: 'e-aggregate>e-columns',
+    selector: 'ejs-grid>e-aggregates>e-aggregate>e-columns',
     queries: {
         children: new ContentChildren(AggregateColumnDirective)
     },

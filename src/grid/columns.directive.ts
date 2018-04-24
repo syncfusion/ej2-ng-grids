@@ -18,7 +18,7 @@ let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allow
  * ```
  */
 @Directive({
-    selector: 'e-columns>e-column',
+    selector: 'ejs-grid>e-columns>e-column',
     inputs: input,
     queries: {
 

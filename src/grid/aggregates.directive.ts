@@ -25,7 +25,7 @@ let input: string[] = ['columns'];
  * ```
  */
 @Directive({
-    selector: 'e-aggregates>e-aggregate',
+    selector: 'ejs-grid>e-aggregates>e-aggregate',
     inputs: input,
     queries: {
         childColumns: new ContentChild(AggregateColumnsDirective)
