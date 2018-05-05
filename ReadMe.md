@@ -1,6 +1,6 @@
 # ej2-ng-grids
 
-The Grid component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [`DataManager`](http://ej2.syncfusion.com/angular/documentation/data/) binding data fields to columns. Also displaying a column header to identify the field with support for grouped records.
+The Grid component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated. It will pull data from a data source, such as array of JSON objects, `OData web services`, or [`DataManager`](http://ej2.syncfusion.com/angular/documentation/data?utm_source=npm&utm_campaign=grid) binding data fields to columns. Also displaying a column header to identify the field with support for grouped records.
 
 ![Grid](https://ej2.syncfusion.com/products/grid/readme.gif)
 
@@ -16,23 +16,24 @@ npm install @syncfusion/ej2-ng-grids
 
 ## Resources
 
-* [Getting Started](https://ej2.syncfusion.com/angular/documentation/grid/getting-started.html)
-* [View Online Demos](https://ej2.syncfusion.com/angular/demos/#/material/grid/default)
+* [Getting Started](https://ej2.syncfusion.com/angular/documentation/grid/getting-started.html?utm_source=npm&utm_campaign=grid)
+* [View Online Demos](https://ej2.syncfusion.com/angular/demos/#/material/grid/default?utm_source=npm&utm_campaign=grid)
+* [Product Page](https://www.syncfusion.com/products/angular/data-grid)
 
 ## Supported Frameworks
 
 Grid component is also offered in following list of frameworks.
 
-1. [Angular](https://www.npmjs.com/package/@syncfusion/ej2-ng-grids)
-2. [React](https://www.npmjs.com/package/@syncfusion/ej2-react-grids)
+1. [Angular](https://www.npmjs.com/package/@syncfusion/ej2-ng-grids?utm_source=npm&utm_campaign=grid)
+2. [React](https://www.npmjs.com/package/@syncfusion/ej2-react-grids?utm_source=npm&utm_campaign=grid)
 3. [ASP.NET Core](https://www.syncfusion.com/products/aspnetcore/data-grid)
 4. [ASP.NET MVC](https://www.syncfusion.com/products/aspnetmvc/data-grid)
 5. [JavaScript (ES5)](https://www.syncfusion.com/products/javascript/data-grid)
 
 ## Showcase samples
 
-* Expanse Tracker ([Source](https://github.com/syncfusion/ej2-sample-ng-expensetracker), [Live Demo](https://ej2.syncfusion.com/showcase/angular/expensetracker/#/dashboard))
-* Loan Calculator ([Source](https://github.com/syncfusion/ej2-sample-ng-loancalculator), [Live Demo](https://ej2.syncfusion.com/showcase/angular/loancalculator/))
+* Expanse Tracker ([Source](https://github.com/syncfusion/ej2-sample-ng-expensetracker), [Live Demo](https://ej2.syncfusion.com/showcase/angular/expensetracker/#/dashboard?utm_source=npm&utm_campaign=grid))
+* Loan Calculator ([Source](https://github.com/syncfusion/ej2-sample-ng-loancalculator), [Live Demo](https://ej2.syncfusion.com/showcase/angular/loancalculator/?utm_source=npm&utm_campaign=grid))
 
 ## Key Features
 
@@ -63,7 +64,7 @@ Grid component is also offered in following list of frameworks.
 
 Product support is available for through following mediums.
 
-* Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents) support system or [Community forum](https://www.syncfusion.com/forums/angular-js2).
+* Creating incident in Syncfusion [Direct-trac](https://www.syncfusion.com/support/directtrac/incidents?utm_source=npm&utm_campaign=grid) support system or [Community forum](https://www.syncfusion.com/forums/angular-js2?utm_source=npm&utm_campaign=grid).
 * New [GitHub issue](https://github.com/syncfusion/ej2-ng-grids/issues/new).
 * Ask your query in Stack Overflow with tag `syncfusion`, `ej2`.
 
