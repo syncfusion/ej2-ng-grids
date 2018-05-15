@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'headerTextAlign', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -268,6 +268,11 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default undefined
      */
     public headerText: any;
+    /** 
+     * Define the alignment of column header which is used to align the text of column header.
+     * @default undefined
+     */
+    public headerTextAlign: any;
     /** 
      * column visibility can change based on its [`Media Queries`](http://cssmediaqueries.com/what-are-css-media-queries.html). 
      * `hideAtMedia` accepts only valid Media Queries.
