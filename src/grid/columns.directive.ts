@@ -3,7 +3,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { Template } from '@syncfusion/ej2-ng-base';
 
 
-let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'headerTextAlign', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
+let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowReordering', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'headerTextAlign', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 
 /**
  * `e-column` directive represent a column of the Angular Grid. 
@@ -50,6 +50,12 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * @default true
      */
     public allowGrouping: any;
+    /** 
+     * If `allowReordering` set to false, then it disables reorder of a particular column. 
+     * By default all columns can be reorder.
+     * @default true
+     */
+    public allowReordering: any;
     /** 
      * If `allowResizing` set to false, it disables resize option of a particular column.
      * @default true
@@ -235,6 +241,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
      * [`number`](../base/intl.html#number-formatter-and-parser) 
      * and [`date`](../base/intl.html#date-formatter-and-parser) formats.
      * @default null
+     * @asptype string
      */
     public format: any;
     /** 
@@ -270,7 +277,8 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     public headerText: any;
     /** 
      * Define the alignment of column header which is used to align the text of column header.
-     * @default undefined
+     * @aspdefaultvalueignore 
+     * @default null
      */
     public headerTextAlign: any;
     /** 

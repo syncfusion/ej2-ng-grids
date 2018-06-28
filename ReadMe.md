@@ -24,10 +24,11 @@ npm install @syncfusion/ej2-ng-grids
 
 Grid component is also offered in following list of frameworks.
 
-1. [React](https://www.npmjs.com/package/@syncfusion/ej2-react-grids?utm_source=npm&utm_campaign=grid) 
-2. [JavaScript (ES5)](https://www.syncfusion.com/products/javascript/data-grid)
-3. [ASP.NET Core](https://www.syncfusion.com/products/aspnetcore/data-grid)
-4. [ASP.NET MVC](https://www.syncfusion.com/products/aspnetmvc/data-grid)
+1. [React](https://www.npmjs.com/package/@syncfusion/ej2-react-grids?utm_source=npm&utm_campaign=grid)
+2. [VueJS](https://www.npmjs.com/package/@syncfusion/ej2-vue-grids?utm_source=npm&utm_campaign=grid)
+3. [JavaScript (ES5)](https://www.syncfusion.com/products/javascript/data-grid)
+4. [ASP.NET Core](https://www.syncfusion.com/products/aspnetcore/data-grid)
+5. [ASP.NET MVC](https://www.syncfusion.com/products/aspnetmvc/data-grid)
 
 ## Showcase samples
 
@@ -39,7 +40,7 @@ Grid component is also offered in following list of frameworks.
 * [**Data sources**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/localdata) - Bind the Grid component with an array of JSON objects or DataManager.
 * [**Async pipe**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/asyncpipe) - Bind the Grid component with `RxJS.Observable` using `async` pipe.
 * [**Sorting and grouping**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/grouping) - Supports n levels of sorting and grouping.
-* [**Filtering**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/filtering) - Offers filter bar at each column to filter data.
+* [**Filtering**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/filtering) - Offers filter UI such as filter bar, menu, excel and checkbox at each column to filter data.
 * [**Paging**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/paging) - Provides the option to easily switch between pages using the pager bar.
 * [**Editing**](https://ej2.syncfusion.com/angular/demos/?utm_source=npm&utm_campaign=grid#/material/grid/normal-edit) - provides the options for create, read, update, and delete operations.
 * **Columns** - The column definitions are used as the dataSource schema in the Grid. This plays a vital role in rendering column values in the required format.

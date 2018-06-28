@@ -2,26 +2,32 @@
 
 ## [Unreleased]
 
-## 16.1.48 (2018-06-14)
+## 16.2.41 (2018-06-25)
 
 ### Grid
 
 #### Bug Fixes
 
-- Dropdown Editing issue fixed when grid is resides in Dialog
-- Complex object properties missed while batch editing issue fixed.
-- Refreshing grid in edit state while using frozen rows and columns is fixed
-- Sorting in disable state while set dynamic sort settings with descending order issue fixed  
+- Group footer template shows incorrect value while using `disablePageWiseAggregate` issue fixed.
+- Unable to sort when set dynamic sort settings in descending order resolved.
+- Footer aggregate row is not aligned properly when using child grid resolved.
+- In batch editing, script error occurs when focusing on grid after clicking add and cancel button fixed.
+- Filter icon misalignment with text wrap enabled resolved.
+- Selection retained after unchecking the check all checkbox with remote data source fixed.
+- `actionComplete` event is not triggered for batch cancel resolved.
+- Frozen content got hidden while adding new row with auto height is resolved.
+- Unable to use auto complete inside filter bar template resolved.
+- Aggregates row get misaligned while horizontal scrolling if vertical scrollbar presents resolved.
+- Excel filter dialog is not updated when properties updated through `setProperties` issue resolved.
+- Indent column disappeared when resizing the hierarchy column in Grid issue fixed.
 
+- Row elements are not available while using `ngSwitch` in row template.
+- Incorrect footer aggregate value calculated with `async` pipe is resolved.
 
-## 16.1.47 (2018-06-06)
+#### Improvement
 
-### Grid
+- Added excel filter UI with `async` pipe support.
 
-#### Bug Fixes
-
-- Memory leak issue with angular routing fixed.
-- Sort icon misalignment with auto wrap feature.
 
 ## 16.1.44 (2018-05-18)
 
@@ -202,7 +208,7 @@
 #### Breaking Changes
 
 - All grid enum property values are changed from camel casing to pascal casing. Please refer the below link for complete API changes from `v15.4.23` to `v16.1.24`.
-[Migration](http://ej2.syncfusion.com/documentation/grid/migration.html).
+- [Migration](http://ej2.syncfusion.com/documentation/grid/migration.html).
 
 ## 15.4.30-preview (2018-02-14)
 
@@ -318,15 +324,11 @@
 
 #### Bug Fixes
 
-- Script error when pdf exporting with null values.
+- Grid height 100% is not working fixed.
 
 #### Breaking Changes
 
 - Now `ColumnChooser` module must be injected to use column chooser feature.
-
-#### Bug Fixes
-
-- Grid height 100% is not working fixed.
 
 ## 15.4.21-preview (2017-12-08)
 
@@ -384,6 +386,7 @@
 
 Grid component is used to display and manipulate tabular data with configuration options to control the way the data is presented and manipulated.
 
+
 - **Data sources** - Bind the Grid component with an array of JavaScript objects or DataManager.
 - **Sorting and grouping** - Supports n levels of sorting and grouping.
 - **Selection** - Provides the option to select the grid rows single or multiple.
@@ -402,3 +405,5 @@ Grid component is used to display and manipulate tabular data with configuration
 - **Print and Exporting** - Provides the option to print and exporting grid records.
 - **RTL** - Provides a full-fledged right-to-left mode which aligns content in the Grid component from right to left.
 - **Localization** - Provides inherent support to localize the UI.
+
+

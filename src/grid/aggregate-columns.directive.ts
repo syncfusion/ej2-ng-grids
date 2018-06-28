@@ -46,6 +46,7 @@ export class AggregateColumnDirective extends ComplexBase<AggregateColumnDirecti
      * * falsecount 
      * * custom 
      * > Specify the `type` value as `custom` to use custom aggregation.
+     * @asptype string
      * @default null
      */
     public type: any;
@@ -73,6 +74,7 @@ export class AggregateColumnDirective extends ComplexBase<AggregateColumnDirecti
      * Gets the format from the user, which can be standard or custom 
      * [`number`](../base/intl.html#number-formatter-and-parser) 
      * and [`date`](../base/intl.html#date-formatter-and-parser) formats.
+     * @asptype string
      * @default null
      */
     public format: any;
