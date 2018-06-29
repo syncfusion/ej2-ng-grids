@@ -2,6 +2,28 @@
 
 ## [Unreleased]
 
+## 16.2.42 (2018-06-27)
+
+### Grid
+
+#### Bug Fixes
+
+- Batch confirmation dialog is not shown when we use Excel/Checkbox filter in Grid is resolved.
+- Excel text filter icon does not update with localization is resolved.
+- `setCellValue` not updated the value when we use frozen columns is resolved.
+- Provide `cellSaved` event support for getting the edited data while using batch Editing.
+- column size in IE when grouping is not changing like in chrome is resolved.
+- Bottom rows do not get selected with Virtualization and Grouping is resolved.
+- Script error thrown while refreshing grid in edit state is resolved.
+- Complex data with custom excel filter throws script error is resolved.
+- Invalid filtered data in `datetime` column issue resolved.
+- Empty Grid showed while editing request failed issue resolved.
+- Prevented the script errors while destroying grid.
+- Script error while rendering the grid inside a dialog issue resolved.
+- Complex data with first row null value issue resolved.
+- Success and fail handler triggering issue resolved.
+- Additional parameter not available in menu filter issue resolved.
+
 ## 16.2.41 (2018-06-25)
 
 ### Grid
@@ -27,6 +49,27 @@
 #### Improvement
 
 - Added excel filter UI with `async` pipe support.
+
+
+## 16.1.48 (2018-06-13)
+
+### Grid
+
+#### Bug Fixes
+
+- Dropdown Editing issue fixed when grid is resides in Dialog
+- Complex object properties missed while batch editing issue fixed.
+- Refreshing grid in edit state while using frozen rows and columns is fixed
+- Sorting in disable state while set dynamic sort settings with descending order issue fixed
+
+## 16.1.47 (2018-06-06)
+
+### Grid
+
+#### Bug Fixes
+
+Memory leak issue with angular routing fixed.
+Sort icon misalignment with auto wrap feature.
 
 
 ## 16.1.44 (2018-05-18)
