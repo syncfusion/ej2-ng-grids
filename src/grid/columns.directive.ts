@@ -393,9 +393,9 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     @ContentChild('commandsTemplate')
     @Template()
     public commandsTemplate: any;
-    @ContentChild('itemTemplate')
+    @ContentChild('filterItemTemplate')
     @Template()
-    public itemTemplate: any;
+    public filter_itemTemplate: any;
 
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
