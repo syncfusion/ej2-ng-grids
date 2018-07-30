@@ -4,7 +4,9 @@ The Grid component is used to display and manipulate tabular data with configura
 
 ![Grid](https://ej2.syncfusion.com/products/grid/readme.gif)
 
-> Grid is part of Syncfusion Essential JS 2 commercial program. License is available in two models Community and Paid. Please refer the license file for more information. License can be obtained by registering at [https://www.syncfusion.com/downloads/essential-js2](https://www.syncfusion.com/downloads/essential-js2?utm_source=npm&utm_campaign=grid)
+> This is a commercial product and requires a paid license for possession or use. Syncfusion’s licensed software, including this component, is subject to the terms and conditions of Syncfusion's EULA (https://www.syncfusion.com/eula/es/). To acquire a license, you can purchase one at https://www.syncfusion.com/sales/products or start a free 30-day trial here (https://www.syncfusion.com/account/manage-trials/start-trials).
+
+> A free community license (https://www.syncfusion.com/products/communitylicense) is also available for companies and individuals whose organizations have less than $1 million USD in annual gross revenue and five or fewer developers.
 
 ## Setup
 
@@ -24,8 +26,8 @@ npm install @syncfusion/ej2-ng-grids
 
 Grid component is also offered in following list of frameworks.
 
-1. [React](https://www.npmjs.com/package/@syncfusion/ej2-react-grids?utm_source=npm&utm_campaign=grid)
-2. [VueJS](https://www.npmjs.com/package/@syncfusion/ej2-vue-grids?utm_source=npm&utm_campaign=grid)
+1. [React](https://github.com/syncfusion/ej2-react-grids)
+2. [VueJS](https://github.com/syncfusion/ej2-vue-grids)
 3. [JavaScript (ES5)](https://www.syncfusion.com/products/javascript/data-grid)
 4. [ASP.NET Core](https://www.syncfusion.com/products/aspnetcore/data-grid)
 5. [ASP.NET MVC](https://www.syncfusion.com/products/aspnetmvc/data-grid)
@@ -76,19 +78,4 @@ Check the license detail [here](https://github.com/syncfusion/ej2/blob/master/li
 
 Check the changelog [here](https://github.com/syncfusion/ej2-ng-grids/blob/master/CHANGELOG.md)
 
-
-## Installing
-
-To install all dependent packages, use the below command
-
-```
-npm install
-```
-
-## Building
-
-To compile the source files, use the below command
-
-```
-npm run build
-```
+&copy; Copyright 2018 Syncfusion, Inc. All Rights Reserved. The Syncfusion Essential Studio license and copyright applies to this distribution.

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, Optional, ContentChild } from '@angular/core';
+import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, Renderer2, ValueProvider, Optional, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
 import { Grid, Filter, Page, Selection, Sort, Group, Reorder, RowDD, DetailRow, Toolbar, Aggregate, Search, VirtualScroll, Edit, Resize, ExcelExport, PdfExport, CommandColumn, ContextMenu, Freeze, ColumnMenu, ColumnChooser, ForeignKey } from '@syncfusion/ej2-grids';
 import { Template } from '@syncfusion/ej2-ng-base';
@@ -61,11 +61,11 @@ export class GridComponent extends Grid implements IComponentBase {
     @Template()
     public pagerTemplate: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() edit: Edit, @Optional() resize: Resize, @Optional() excelExport: ExcelExport, @Optional() pdfExport: PdfExport, @Optional() commandColumn: CommandColumn, @Optional() contextMenu: ContextMenu, @Optional() freeze: Freeze, @Optional() columnMenu: ColumnMenu, @Optional() columnChooser: ColumnChooser, @Optional() foreignKey: ForeignKey) {
+    constructor(private ngEle: ElementRef, private srenderer: Renderer2, private viewContainerRef:ViewContainerRef, @Optional() filter: Filter, @Optional() page: Page, @Optional() selection: Selection, @Optional() sort: Sort, @Optional() group: Group, @Optional() reorder: Reorder, @Optional() rowDD: RowDD, @Optional() detailRow: DetailRow, @Optional() toolbar: Toolbar, @Optional() aggregate: Aggregate, @Optional() search: Search, @Optional() virtualScroll: VirtualScroll, @Optional() edit: Edit, @Optional() resize: Resize, @Optional() excelExport: ExcelExport, @Optional() pdfExport: PdfExport, @Optional() commandColumn: CommandColumn, @Optional() contextMenu: ContextMenu, @Optional() freeze: Freeze, @Optional() columnMenu: ColumnMenu, @Optional() columnChooser: ColumnChooser, @Optional() foreignKey: ForeignKey) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
-        for (let i: number = 2; i < arguments.length; i++) {
+        for (let i: number = 3; i < arguments.length; i++) {
             let injectedObj: Object = arguments[i];
             if (injectedObj) {
                 this.injectedModules.push(<Function>injectedObj);

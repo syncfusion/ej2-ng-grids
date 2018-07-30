@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, ValueProvider, ContentChild } from '@angular/core';
+import { Component, ElementRef, ViewContainerRef, ChangeDetectionStrategy, Renderer2, ValueProvider, ContentChild } from '@angular/core';
 import { ComponentBase, IComponentBase, applyMixins, PropertyCollectionInfo, setValue } from '@syncfusion/ej2-ng-base';
 import { Pager } from '@syncfusion/ej2-grids';
 import { Template } from '@syncfusion/ej2-ng-base';
@@ -36,11 +36,11 @@ export class PagerComponent extends Pager implements IComponentBase {
     @Template()
     public template: any;
 
-    constructor(private ngEle: ElementRef, private viewContainerRef:ViewContainerRef) {
+    constructor(private ngEle: ElementRef, private srenderer: Renderer2, private viewContainerRef:ViewContainerRef) {
         super();
         this.element = this.ngEle.nativeElement;
         this.injectedModules = this.injectedModules || [];
-        for (let i: number = 2; i < arguments.length; i++) {
+        for (let i: number = 3; i < arguments.length; i++) {
             let injectedObj: Object = arguments[i];
             if (injectedObj) {
                 this.injectedModules.push(<Function>injectedObj);

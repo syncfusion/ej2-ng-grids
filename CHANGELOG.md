@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+## 16.2.46 (2018-07-30)
+
+### Grid
+
+#### Bug Fixes
+
+- Selected rows event arguments are wrong with grouping and `enableVirtualization` is resolved.
+- Multiple rows selecting while scrolling with grouping and `enableVirtualization` is resolved.
+- Provided locale string for pager All option.
+
 ## 16.2.45 (2018-07-17)
 
 ### Grid
