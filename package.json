@@ -1,14 +1,14 @@
 {
   "name": "@syncfusion/ej2-ng-grids",
-  "version": "16.2.48",
+  "version": "16.2.49",
   "description": "Essential JS 2 Grid Component for Angular",
   "author": "Syncfusion Inc.",
   "license": "SEE LICENSE IN license",
   "schematics": "./schematics/collection.json",
   "dependencies": {
-    "@syncfusion/ej2-base": "~16.2.47",
-    "@syncfusion/ej2-ng-base": "~16.2.48",
-    "@syncfusion/ej2-grids": "~16.2.48"
+    "@syncfusion/ej2-base": "~16.2.49",
+    "@syncfusion/ej2-ng-base": "~16.2.49",
+    "@syncfusion/ej2-grids": "~16.2.49"
   },
   "devDependencies": {
     "rxjs": "5.0.0 - 5.5.10",
@@ -41,7 +41,18 @@
   },
   "keywords": [
     "ej2",
+    "ej2-grids",
     "syncfusion",
+    "web-components",
+    "data-grid",
+    "data-table",
+    "grid",
+    "pager",
+    "data",
+    "table",
+    "typescript",
+    "angular",
+    "ng-grids",
     "ej2-ng-grids"
   ],
   "repository": {
