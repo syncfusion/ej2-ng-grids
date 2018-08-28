@@ -4,7 +4,7 @@ import { Template } from '@syncfusion/ej2-ng-base';
 
 
 let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowReordering', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'headerTextAlign', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
-
+let outputs: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allowReordering', 'allowResizing', 'allowSorting', 'clipMode', 'columns', 'commands', 'customAttributes', 'dataSource', 'defaultValue', 'disableHtmlEncode', 'displayAsCheckBox', 'edit', 'editType', 'enableGroupByFormat', 'field', 'filter', 'filterBarTemplate', 'foreignKeyField', 'foreignKeyValue', 'format', 'formatter', 'headerTemplate', 'headerText', 'headerTextAlign', 'hideAtMedia', 'isFrozen', 'isIdentity', 'isPrimaryKey', 'maxWidth', 'minWidth', 'showColumnMenu', 'showInColumnChooser', 'sortComparer', 'template', 'textAlign', 'type', 'uid', 'validationRules', 'valueAccessor', 'visible', 'width'];
 /**
  * `e-column` directive represent a column of the Angular Grid. 
  * It must be contained in a Grid component(`ejs-grid`). 
@@ -19,7 +19,7 @@ let input: string[] = ['allowEditing', 'allowFiltering', 'allowGrouping', 'allow
  */
 @Directive({
     selector: 'ejs-grid>e-columns>e-column',
-    inputs: input,
+    inputs: input,   
     queries: {
 
     }
@@ -400,6 +400,7 @@ export class ColumnDirective extends ComplexBase<ColumnDirective> {
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
         setValue('currentInstance', this, this.viewContainerRef);
+        //this.registerEvents(outputs);
     }
 }
 

@@ -4,7 +4,7 @@ import { ComplexBase, ArrayBase, setValue } from '@syncfusion/ej2-ng-base';
 import { AggregateColumnsDirective } from './aggregate-columns.directive';
 
 let input: string[] = ['columns'];
-
+let outputs: string[] = ['columns'];
 /**
  * `e-aggregate` directive represent a aggregate row of the Angular Grid. 
  * It must be contained in a Grid component(`ejs-grid`). 
@@ -26,7 +26,7 @@ let input: string[] = ['columns'];
  */
 @Directive({
     selector: 'ejs-grid>e-aggregates>e-aggregate',
-    inputs: input,
+    inputs: input,   
     queries: {
         childColumns: new ContentChild(AggregateColumnsDirective)
     }
@@ -43,6 +43,7 @@ export class AggregateDirective extends ComplexBase<AggregateDirective> {
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
         setValue('currentInstance', this, this.viewContainerRef);
+        //this.registerEvents(outputs);
     }
 }
 

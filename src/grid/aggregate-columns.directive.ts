@@ -4,7 +4,7 @@ import { Template } from '@syncfusion/ej2-ng-base';
 
 
 let input: string[] = ['columnName', 'customAggregate', 'field', 'footerTemplate', 'format', 'groupCaptionTemplate', 'groupFooterTemplate', 'type'];
-
+let outputs: string[] = ['columnName', 'customAggregate', 'field', 'footerTemplate', 'format', 'groupCaptionTemplate', 'groupFooterTemplate', 'type'];
 /**
  * `e-aggregate->e-column` directive represent a aggregate column of the Angular Grid. 
  * ```html
@@ -25,7 +25,7 @@ let input: string[] = ['columnName', 'customAggregate', 'field', 'footerTemplate
  */
 @Directive({
     selector: 'ejs-grid>e-aggregates>e-aggregate>e-columns>e-column',
-    inputs: input,
+    inputs: input,   
     queries: {
 
     }
@@ -118,6 +118,7 @@ export class AggregateColumnDirective extends ComplexBase<AggregateColumnDirecti
     constructor(private viewContainerRef:ViewContainerRef) {
         super();
         setValue('currentInstance', this, this.viewContainerRef);
+        //this.registerEvents(outputs);
     }
 }
 
