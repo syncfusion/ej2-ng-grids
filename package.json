@@ -1,14 +1,14 @@
 {
   "name": "@syncfusion/ej2-ng-grids",
-  "version": "16.2.51",
+  "version": "16.2.52",
   "description": "Essential JS 2 Grid Component for Angular",
   "author": "Syncfusion Inc.",
   "license": "SEE LICENSE IN license",
   "schematics": "./schematics/collection.json",
   "dependencies": {
     "@syncfusion/ej2-base": "~16.2.50",
-    "@syncfusion/ej2-ng-base": "~undefined",
-    "@syncfusion/ej2-grids": "~16.2.51"
+    "@syncfusion/ej2-ng-base": "~16.2.52",
+    "@syncfusion/ej2-grids": "~16.2.52"
   },
   "devDependencies": {
     "rxjs": "5.0.0 - 5.5.10",
